@@ -64,6 +64,37 @@
         right: 10%;
         transform: translate(50%, -50%);
       }
+      /* Adjust carousel height */
+      .custom-carousel-height {
+        height: 400px;
+      }
+
+      /* Sombra constante en los controles */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.85
+        ); /* Fondo semitransparente negro */
+        border-radius: 50%; /* Hacerlos circulares */
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra negra */
+      }
+      /* Cambiar color y sombra al hacer clic o tap */
+      .carousel-control-prev-icon:active,
+      .carousel-control-next-icon:active {
+        background-color: #335aa6; /* Fondo negro */
+        color: 0 6px 12px rgb(99, 147, 242);
+        box-shadow: 0 6px 12px rgb(99, 147, 242); /* Sombra roja */
+      }
+
+      /*Code to change link element in carrusel parragraphs*/
+      .project-link {
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -119,5 +150,76 @@
         <img src="/Assets/Redux.png" alt="Orbit 4" class="orbit-image" />
       </div>
     </section>
+
+    <!-- Section with projects carrusel -->
+    <section class="w-100">
+      <div
+        class="container-fluid my-5 bg-primary w-100 custom-carousel-height d-flex align-items-center"
+      >
+        <div id="carouselOfProjects" class="carousel slide">
+          <div class="carousel-inner">
+            <!-- Primera diapositiva -->
+            <div class="carousel-item active">
+              <div class="row g-0 align-items-center justify-content-center">
+                <div class="col-md-4">
+                  <img
+                    src="/Assets/bleach-market.png"
+                    class="img-fluid rounded-start"
+                    alt="bleach-project-pic"
+                  />
+                </div>
+                <div class="col-md-3 ms-2">
+                  <div class="card-body">
+                    <h5 class="card-title text-light">Bleach Market Website</h5>
+                    <p class="card-text text-light">
+                      This website is built using HTML, CSS, and Bootstrap 5,
+                      highlighting key features such as the dynamic carousel,
+                      responsive navbar, and interactive forms. Explore the
+                      modern design and seamless user experience powered by
+                      Bootstrap 5’s latest components.
+                      <a
+                        href="https://mag1c1an123.github.io/bleachmarket.github.io/"
+                        class="project-link"
+                        target="_blank"
+                        >Click here!</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles del carrusel -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselOfProjects"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselOfProjects"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <br />
+    <footer class="bg-primary mt-5 text-white text-center py-4">
+      <p>&copy; 2025 My Portfolio | All Rights Reserved</p>
+      <div>
+        <a href="#" class="text-white me-3">Privacy Policy</a>
+        <a href="#" class="text-white">Terms of Service</a>
+      </div>
+    </footer>
   </body>
 </html>
